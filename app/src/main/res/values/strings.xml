@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">In The Car App</string>
+
+
+    <string name="snackbar_text_no_internet_connection_available">Sorry No Internet Connection available now Please Retry</string>
+    <string name="snackbar_text_error_occurred">Error Occurred</string>
+    <string name="snackbar_text_unstable_internet">Unstable Internet Connection</string>
+    <string name="snackbar_text_exception_occurred">Exception Occurred</string>
+    <string name="snackbar_text_invalid_access_pin">Invalid Access PIN</string>
+
+    <string name="snackbar_action_go_to_settings">GO TO SETTINGS</string>
+    <string name="snackbar_action_dismiss">DISMISS</string>
+    <string name="snackbar_action_retry">RETRY</string>
+
+    <string name="snackbar_action_undo">UNDO</string>
+    <string name="please_enter_email">Please enter Email</string>
+    <string name="please_enter_mobile">Please enter Mobile</string>
+    <string name="please_enter_valid_email">Please enter valid Email</string>
+    <string name="please_enter_valid_mobile">Please enter valid Mobile</string>
+    <string name="please_select_user_type">Please select user type</string>
+    <string name="otp_didnt_match">OTP didn\'t match</string>
+    <string name="please_enter_serial_number">Please enter Serial #</string>
+
+
+    <string name="dialog_action_yes">YES</string>
+    <string name="dialog_action_no">NO</string>
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_action_cancel">CANCEL</string>
+    <string name="dialog_action_save">SAVE</string>
+    <string name="dialog_action_logout">LOGOUT</string>
+    <string name="dialog_action_submit">SUBMIT</string>
+    <string name="dialog_action_proceed">PROCEED</string>
+    <string name="dialog_action_ignore">IGNORE</string>
+    <string name="dialog_action_update">UPDATE</string>
+    <string name="dialog_action_exit">EXIT</string>
+    <string name="dialog_action_settings">SETTINGS</string>
+    <string name="dialog_action_close">CLOSE</string>
+    <string name="dialog_action_show_all">SHOW ALL</string>
+
+
+    <string name="please_enter_password">Please enter password</string>
+    <string name="please_enter_old_password">Please enter old password</string>
+    <string name="please_enter_new_password">Please enter new password</string>
+    <string name="password_not_matched">Password did not matched</string>
+    <string name="progress_dialog_text_please_wait">Please wait</string>
+    <string name="progress_dialog_text_loading">Please Wait</string>
+    <string name="set_error_text_please_enter">Please Enter</string>
+
+    <string name="facebook_app_id">295009364838321</string>
+    <string name="fb_login_protocol_scheme">fb295009364838321</string>
+
+    <string name="alert_dialog_message_success">Your Order Placed Successfully</string>
+    <string name="alert_dialog_message_failure">Your Transaction Is Failed. Please Retry </string>
+    <string name="toast_message_card_detail">"Please enter card details" </string>
+
+    <!-- twilio -->
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_main_chat">General Channel</string>
+    <string name="username_placeholder">username</string>
+    <string name="password_placeholder">password</string>
+    <string name="full_name_placeholder">full name</string>
+    <string name="email_placeholder">email address</string>
+    <string name="twilio_first_line">A simple chat app built using the</string>
+    <string name="twilio_second_line">Twilio Chat API</string>
+    <string name="login_all_fields_required">All fields are required</string>
+    <string name="login_user_progress_message">signing in…</string>
+    <string name="register_user_progress_message">registering user…</string>
+
+    <!-- Strings related to forgot password -->
+    <string name="forgot_password_message">
+        That\'s okay. Just enter your email and we\'ll send you a link to reset your password.
+    </string>
+    <string name="forgot_password_send_button_text">Send</string>
+    <string name="forgot_password_go_back_button_text">\u003c Go back</string>
+    <string name="forgot_password_email_required">
+        You must provide a registered email address to start the recovery process
+    </string>
+    <string name="forgot_password_progress_message">recovering password…</string>
+    <string name="forgot_password_success_message">
+        We have sent you an email to start the password recovery process
+    </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="logout_text">Logout</string>
+
+    <string name="logout_prompt_message">Are you sure you want to logout?</string>
+
+    <string name="login_button_text">Login</string>
+    <string name="register_button_text">Register</string>
+    <string name="forgot_password_button_text">Forgot your password?</string>
+    <string name="create_account_button_text">Create an account</string>
+    <string name="back_to_login_button_text">Back to login</string>
+    <string name="image_text">image</string>
+
+
+
+</resources>
