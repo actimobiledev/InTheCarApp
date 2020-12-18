@@ -6,6 +6,7 @@
 
     <dimen name="activity_margin">16dp</dimen>
     <dimen name="activity_margin_extra_large">20dp</dimen>
+    <dimen name="activity_margin_extra_extra_large">30dp</dimen>
     <dimen name="activity_margin_small">8dp</dimen>
     <dimen name="activity_margin_extra_small">4dp</dimen>
     <dimen name="edittext_padding">8dp</dimen>
