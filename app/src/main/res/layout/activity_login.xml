@@ -10,26 +10,37 @@
         android:layout_height="match_parent"
         android:animateLayoutChanges="true">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bg_app_logo"
+            android:id="@+id/ivLogo"
+            android:layout_margin="@dimen/activity_margin_extra_extra_large"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlLogin"
+            android:layout_below="@+id/ivLogo"
+            android:visibility="visible">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar_layout"
             android:orientation="vertical">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bg_app_logo"
-                android:layout_margin="@dimen/activity_margin_extra_extra_large"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:id="@+id/llSignin2"
                     android:background="@drawable/bg_login_path"
                     android:layout_marginRight="@dimen/activity_margin_extra_large">
 
@@ -58,14 +69,14 @@
                         android:textColor="@color/text_color_light_white"
                         android:padding="@dimen/edittext_padding"
                         android:layout_marginRight="60dp"
-                        android:textSize="@dimen/text_size_small"></EditText>
+                        android:textSize="@dimen/text_size_small"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:background="@color/text_color_light_white"
                         android:layout_marginLeft="@dimen/edittext_padding"
-                        android:layout_marginRight="60dp"></View>
+                        android:layout_marginRight="60dp"/>
 
 
                     <TextView
@@ -76,40 +87,86 @@
                         android:textSize="@dimen/text_size_small"
                         android:textColor="@color/text_color_light_white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <com.inthecarapp.utils.OtpEditText
+                        android:id="@+id/login_et_otp"
+                        android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@null"
-                                android:maxEms="1"
-                                android:text="1"
-
-                                android:textColor="@color/text_color_light_white"
-                                android:padding="@dimen/edittext_padding"
-                                android:layout_marginRight="60dp"
-                                android:textSize="@dimen/text_size_small"/>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="0.5dp"
-                                android:background="@color/text_color_light_white"
-                                android:layout_marginLeft="@dimen/edittext_padding"
-                                android:layout_marginRight="60dp"/>
+                        android:cursorVisible="false"
+                        android:digits="1234567890"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColor="@color/text_color_light_white"
+                        android:textStyle="bold"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_marginRight="@dimen/activity_margin"/>
 
 
-                        </LinearLayout>
-                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="Forgot Password?"
+                        android:textColor="@color/text_color_light_white"
+                        android:paddingLeft="@dimen/edittext_padding"
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_marginTop="@dimen/activity_margin_small"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:background="@color/text_color_light_white"
+                        android:layout_marginLeft="@dimen/edittext_padding"
+                        android:text="Forgot Password  "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:text="Register User"
+                        android:textColor="@color/text_color_light_white"
+                        android:paddingLeft="@dimen/edittext_padding"
+                        android:textSize="@dimen/text_size_small"
+                        android:layout_marginTop="@dimen/activity_margin_small"
+                        android:id="@+id/tvRegisterUser"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:background="@color/text_color_light_white"
+                        android:layout_marginLeft="@dimen/edittext_padding"
+                        android:text="Register User  "/>
+
+
+
+
+
+
 
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_button_background"
+                    android:gravity="center"
+                    android:id="@+id/llSignin"
+                    android:layout_marginLeft="-80dp"
+                    android:layout_marginBottom="@dimen/activity_margin"
+                    android:layout_alignBottom="@+id/llSignin2"
+                    android:layout_toRightOf="@+id/llSignin2">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+
+
+                </LinearLayout>
+
 
             </RelativeLayout>
 
@@ -124,6 +181,236 @@
 
 
 
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlSignup"
+            android:layout_below="@+id/ivLogo"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_layout"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/llSignup2"
+                        android:background="@drawable/bg_signup"
+                        android:layout_marginRight="@dimen/activity_margin_extra_large">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Signup"
+                            android:padding="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_medium"
+                            android:textColor="@color/text_color_light_white"
+                            android:textStyle="bold"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter your email/phone"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/text_color_light_white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:textColor="@color/text_color_light_white"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:paddingTop="@dimen/edittext_padding"
+                            android:layout_marginRight="60dp"
+                            android:textSize="@dimen/text_size_small"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/text_color_light_white"
+                            android:layout_marginLeft="@dimen/edittext_padding"
+                            android:layout_marginRight="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Enter Login Code Provide By Auto Deler"
+                            android:padding="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/text_color_light_white" />
+                        <com.inthecarapp.utils.OtpEditText
+                            android:id="@+id/et_otp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:cursorVisible="false"
+                            android:digits="1234567890"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:textColor="@color/text_color_light_white"
+                            android:textStyle="bold"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_marginRight="@dimen/activity_margin"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup password"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_marginTop="@dimen/activity_margin"
+                            android:textColor="@color/text_color_light_white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:inputType="numberPassword"
+                            android:textColor="@color/text_color_light_white"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:paddingTop="@dimen/edittext_padding"
+                            android:layout_marginRight="60dp"
+                            android:textSize="@dimen/text_size_small"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/text_color_light_white"
+                            android:layout_marginLeft="@dimen/edittext_padding"
+                            android:layout_marginRight="65dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confirm password"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:layout_marginTop="@dimen/activity_margin"
+                            android:textSize="@dimen/text_size_small"
+                            android:textColor="@color/text_color_light_white" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:inputType="numberPassword"
+                            android:textColor="@color/text_color_light_white"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:paddingTop="@dimen/edittext_padding"
+                            android:layout_marginRight="60dp"
+                            android:textSize="@dimen/text_size_small"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/text_color_light_white"
+                            android:layout_marginLeft="@dimen/edittext_padding"
+                            android:layout_marginRight="70dp"/>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:text="Forgot Password?"
+                            android:textColor="@color/text_color_light_white"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_small"
+                            android:layout_marginTop="@dimen/activity_margin_small"/>
+
+                        <TextView
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.5dp"
+                            android:background="@color/text_color_light_white"
+                            android:layout_marginLeft="@dimen/edittext_padding"
+                            android:text="Forgot Password  "/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:text="Existing User?"
+                            android:textColor="@color/text_color_light_white"
+                            android:paddingLeft="@dimen/edittext_padding"
+                            android:textSize="@dimen/text_size_small"
+                            android:id="@+id/tvExistingUser"
+                            android:layout_marginTop="@dimen/activity_margin_small"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="0.5dp"
+                            android:background="@color/text_color_light_white"
+                            android:layout_marginLeft="@dimen/edittext_padding"
+                            android:text="Register User  "/>
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_button_background"
+                        android:gravity="center"
+                        android:id="@+id/llSignup"
+                        android:layout_marginLeft="-80dp"
+                        android:layout_marginBottom="@dimen/activity_margin"
+                        android:layout_alignBottom="@+id/llSignup2"
+                        android:layout_toRightOf="@+id/llSignup2">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_arrow_right"/>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+           android:layout_alignParentBottom="true"
+            android:src="@drawable/login_road"
+            android:scaleType="centerCrop"/>
 
 
     </RelativeLayout>
